@@ -1,6 +1,6 @@
 package factoryMethod.naturalNumber;
 
-import javax.activation.MailcapCommandMap;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -46,6 +46,13 @@ public class NaturalNumbersManagerTest {
 		naturalNumberManager.setNaturalNumberCreator(new NaturalNumberEsCreator());
 		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
 		assertEquals("cero", naturalNumberManager.getNaturalNumber().getTextValue());
+	}
+	
+	@Test
+	public void sinIdioma() {
+		NaturalNumber naturalNumber = new NaturalNumber();
+		assertEquals(0, naturalNumber.getValue());
+		assertEquals("!!!", naturalNumber.getTextValue());
 	}
 
 }

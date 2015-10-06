@@ -1,5 +1,5 @@
 package factoryMethod.naturalNumber;
 
-public class NaturalNumberFrCreator {
+public class NaturalNumberFrCreator extends NaturalNumberCreator {
 
 }
