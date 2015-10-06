@@ -15,20 +15,20 @@ public class NaturalNumbersManagerTest {
 	}
 
 	@Test
-	public void valorInicial() {
+	public void testValorInicial() {
 		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
 		assertEquals("cero", naturalNumberManager.getNaturalNumber().getTextValue());
 	}
 	
 	@Test
-	public void cambiarValor() {
+	public void testSetValue() {
 		naturalNumberManager.getNaturalNumber().setValue(2);
 		assertEquals(2, naturalNumberManager.getNaturalNumber().getValue());
 		assertEquals("dos", naturalNumberManager.getNaturalNumber().getTextValue());
 	}
 	
 	@Test
-	public void nuevoIdiomaFr() {
+	public void testFrances() {
 		naturalNumberManager.setNaturalNumberCreator(new NaturalNumberFrCreator());
 		naturalNumberManager.createNaturalNumber();
 		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
@@ -36,7 +36,7 @@ public class NaturalNumbersManagerTest {
 	}
 	
 	@Test
-	public void nuevoIdiomaEn() {
+	public void testIngles() {
 		naturalNumberManager.setNaturalNumberCreator(new NaturalNumberEnCreator());
 		naturalNumberManager.createNaturalNumber();
 		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
@@ -44,7 +44,7 @@ public class NaturalNumbersManagerTest {
 	}
 	
 	@Test
-	public void nuevoIdiomaEs() {
+	public void testEspanyol() {
 		naturalNumberManager.setNaturalNumberCreator(new NaturalNumberEsCreator());
 		naturalNumberManager.createNaturalNumber();
 		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
@@ -52,14 +52,14 @@ public class NaturalNumbersManagerTest {
 	}
 	
 	@Test
-	public void sinIdioma() {
+	public void testSinIdioma() {
 		NaturalNumber naturalNumber = new NaturalNumber();
 		assertEquals(0, naturalNumber.getValue());
 		assertEquals("!!!", naturalNumber.getTextValue());
 	}
 	
 	@Test
-	public void sumar() {
+	public void testSumar() {
 		naturalNumberManager.getNaturalNumber().add(1);
 		assertEquals(1, naturalNumberManager.getNaturalNumber().getValue());
 		assertEquals("uno", naturalNumberManager.getNaturalNumber().getTextValue());
