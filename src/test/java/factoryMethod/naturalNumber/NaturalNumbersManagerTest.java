@@ -16,8 +16,8 @@ public class NaturalNumbersManagerTest {
 
 	@Test
 	public void valorInicial() {
-		assertEquals(5, naturalNumberManager.getNaturalNumber().getValue());
-		assertEquals("cinco", naturalNumberManager.getNaturalNumber().getTextValue());
+		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
+		assertEquals("cero", naturalNumberManager.getNaturalNumber().getTextValue());
 	}
 	
 	@Test
@@ -30,6 +30,7 @@ public class NaturalNumbersManagerTest {
 	@Test
 	public void nuevoIdiomaFr() {
 		naturalNumberManager.setNaturalNumberCreator(new NaturalNumberFrCreator());
+		naturalNumberManager.createNaturalNumber();
 		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
 		assertEquals("zero", naturalNumberManager.getNaturalNumber().getTextValue());
 	}
@@ -37,6 +38,7 @@ public class NaturalNumbersManagerTest {
 	@Test
 	public void nuevoIdiomaEn() {
 		naturalNumberManager.setNaturalNumberCreator(new NaturalNumberEnCreator());
+		naturalNumberManager.createNaturalNumber();
 		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
 		assertEquals("nill", naturalNumberManager.getNaturalNumber().getTextValue());
 	}
@@ -44,6 +46,7 @@ public class NaturalNumbersManagerTest {
 	@Test
 	public void nuevoIdiomaEs() {
 		naturalNumberManager.setNaturalNumberCreator(new NaturalNumberEsCreator());
+		naturalNumberManager.createNaturalNumber();
 		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
 		assertEquals("cero", naturalNumberManager.getNaturalNumber().getTextValue());
 	}
