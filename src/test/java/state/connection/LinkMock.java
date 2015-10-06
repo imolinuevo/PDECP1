@@ -3,7 +3,7 @@ package state.connection;
 public final class LinkMock implements Link {
 	private String msg;
 
-	private int respuesta;
+	private int respuesta = 0;
 
 	public String getMsg() {
 		return msg;
