@@ -57,5 +57,12 @@ public class NaturalNumbersManagerTest {
 		assertEquals(0, naturalNumber.getValue());
 		assertEquals("!!!", naturalNumber.getTextValue());
 	}
+	
+	@Test
+	public void sumar() {
+		naturalNumberManager.getNaturalNumber().add(1);
+		assertEquals(1, naturalNumberManager.getNaturalNumber().getValue());
+		assertEquals("uno", naturalNumberManager.getNaturalNumber().getTextValue());
+	}
 
 }
