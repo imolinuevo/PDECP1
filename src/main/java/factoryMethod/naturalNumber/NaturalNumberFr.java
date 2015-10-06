@@ -1,5 +1,5 @@
 package factoryMethod.naturalNumber;
 
-public class NaturalNumberEu {
+public class NaturalNumberFr {
 
 }
