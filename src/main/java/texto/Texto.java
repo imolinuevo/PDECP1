@@ -4,7 +4,11 @@ public class Texto extends Compuesto {
 
 	@Override
 	public void add(Componente componente) {
-
+		if (componente.isComposite()) {
+			componentes.add(componente);
+		} else {
+			throw new UnsupportedOperationException();
+		}
 	}
 
 	@Override
@@ -18,7 +22,9 @@ public class Texto extends Compuesto {
 	}
 
 	public void remove(Componente componente) {
-
+		if (componente.isComposite()) {
+			componentes.remove(componente);
+		}
 	}
 
 }

@@ -3,9 +3,9 @@ package texto;
 import java.util.ArrayList;
 
 public class Compuesto extends Componente {
-	
+
 	protected ArrayList<Componente> componentes;
-	
+
 	public Compuesto() {
 		componentes = new ArrayList<Componente>();
 	}
@@ -17,7 +17,7 @@ public class Compuesto extends Componente {
 
 	@Override
 	public void add(Componente componente) {
-		
+
 	}
 
 	@Override
