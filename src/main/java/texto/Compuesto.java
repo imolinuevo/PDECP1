@@ -1,6 +1,14 @@
 package texto;
 
+import java.util.ArrayList;
+
 public class Compuesto extends Componente {
+	
+	protected ArrayList<Componente> componentes;
+	
+	public Compuesto() {
+		componentes = new ArrayList<Componente>();
+	}
 
 	@Override
 	public boolean isComposite() {

@@ -9,7 +9,12 @@ public class Parrafo extends Compuesto {
 
 	@Override
 	public String dibujar(boolean forzar) {
-		return null;
+		String result = new String();
+		for (Componente componente : componentes) {
+			result += componente.dibujar(forzar);
+		}
+		result += "\n";
+		return result;
 	}
 
 	public void remove(Componente componente) {
