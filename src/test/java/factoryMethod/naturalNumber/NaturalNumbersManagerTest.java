@@ -17,52 +17,61 @@ public class NaturalNumbersManagerTest {
 	@Test
 	public void testValorInicial() {
 		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
-		assertEquals("cero", naturalNumberManager.getNaturalNumber().getTextValue());
+		assertEquals("cero", naturalNumberManager.getNaturalNumber()
+				.getTextValue());
 	}
-	
+
 	@Test
 	public void testSetValue() {
 		naturalNumberManager.getNaturalNumber().setValue(2);
 		assertEquals(2, naturalNumberManager.getNaturalNumber().getValue());
-		assertEquals("dos", naturalNumberManager.getNaturalNumber().getTextValue());
+		assertEquals("dos", naturalNumberManager.getNaturalNumber()
+				.getTextValue());
 	}
-	
+
 	@Test
 	public void testFrances() {
-		naturalNumberManager.setNaturalNumberCreator(new NaturalNumberFrCreator());
+		naturalNumberManager
+				.setNaturalNumberCreator(new NaturalNumberFrCreator());
 		naturalNumberManager.createNaturalNumber();
 		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
-		assertEquals("zero", naturalNumberManager.getNaturalNumber().getTextValue());
+		assertEquals("zero", naturalNumberManager.getNaturalNumber()
+				.getTextValue());
 	}
-	
+
 	@Test
 	public void testIngles() {
-		naturalNumberManager.setNaturalNumberCreator(new NaturalNumberEnCreator());
+		naturalNumberManager
+				.setNaturalNumberCreator(new NaturalNumberEnCreator());
 		naturalNumberManager.createNaturalNumber();
 		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
-		assertEquals("nill", naturalNumberManager.getNaturalNumber().getTextValue());
+		assertEquals("nill", naturalNumberManager.getNaturalNumber()
+				.getTextValue());
 	}
-	
+
 	@Test
 	public void testEspanyol() {
-		naturalNumberManager.setNaturalNumberCreator(new NaturalNumberEsCreator());
+		naturalNumberManager
+				.setNaturalNumberCreator(new NaturalNumberEsCreator());
 		naturalNumberManager.createNaturalNumber();
 		assertEquals(0, naturalNumberManager.getNaturalNumber().getValue());
-		assertEquals("cero", naturalNumberManager.getNaturalNumber().getTextValue());
+		assertEquals("cero", naturalNumberManager.getNaturalNumber()
+				.getTextValue());
 	}
-	
+
 	@Test
 	public void testSinIdioma() {
 		NaturalNumber naturalNumber = new NaturalNumber();
 		assertEquals(0, naturalNumber.getValue());
 		assertEquals("!!!", naturalNumber.getTextValue());
 	}
-	
+
 	@Test
 	public void testSumar() {
 		naturalNumberManager.getNaturalNumber().add(1);
 		assertEquals(1, naturalNumberManager.getNaturalNumber().getValue());
-		assertEquals("uno", naturalNumberManager.getNaturalNumber().getTextValue());
+		assertEquals("uno", naturalNumberManager.getNaturalNumber()
+				.getTextValue());
 	}
 
 }

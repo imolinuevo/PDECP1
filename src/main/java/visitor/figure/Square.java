@@ -6,7 +6,7 @@ public class Square extends Figure {
 		this.sides = 4;
 		this.area = sideLength * sideLength;
 	}
-	
+
 	@Override
 	public void accept(Visitor v) {
 		v.visitSquare(this);

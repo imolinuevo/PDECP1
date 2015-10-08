@@ -6,7 +6,7 @@ public class Triangle extends Figure {
 		this.sides = 3;
 		this.area = (sideLegnth * sideLegnth * Math.sqrt(3)) / 4;
 	}
-	
+
 	@Override
 	public void accept(Visitor v) {
 		v.visitTriangle(this);

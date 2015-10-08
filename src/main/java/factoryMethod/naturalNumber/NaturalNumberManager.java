@@ -5,7 +5,7 @@ public class NaturalNumberManager {
 	private NaturalNumberCreator naturalNumberCreator;
 
 	private NaturalNumber naturalNumber;
-	
+
 	public NaturalNumberManager() {
 		this.naturalNumber = new NaturalNumberEs();
 	}
@@ -18,7 +18,7 @@ public class NaturalNumberManager {
 			NaturalNumberCreator naturalNumberCreator) {
 		this.naturalNumberCreator = naturalNumberCreator;
 	}
-	
+
 	public void createNaturalNumber() {
 		this.naturalNumber = this.naturalNumberCreator.createNaturalNumber();
 	}

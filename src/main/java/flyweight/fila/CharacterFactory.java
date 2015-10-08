@@ -8,12 +8,12 @@ public class CharacterFactory {
 
 	public CharacterConcrete get(char key) {
 		if (map.containsKey(key)) {
-            return map.get(key);
-        } else {
-        	CharacterConcrete characterConcrete = new CharacterConcrete(key);
-            map.put(key, characterConcrete);
-            return characterConcrete;
-        }
+			return map.get(key);
+		} else {
+			CharacterConcrete characterConcrete = new CharacterConcrete(key);
+			map.put(key, characterConcrete);
+			return characterConcrete;
+		}
 	}
 
 }

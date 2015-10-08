@@ -5,7 +5,7 @@ public class VisitorArea extends Visitor {
 	private double totalArea;
 
 	private double higherArea;
-	
+
 	public VisitorArea() {
 		totalArea = 0;
 		higherArea = 0;

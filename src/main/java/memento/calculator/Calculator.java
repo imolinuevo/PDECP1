@@ -31,7 +31,8 @@ public class Calculator implements Mementable<MementoCalculadora> {
 
 	@Override
 	public MementoCalculadora createMemento() {
-		return new MementoCalculadora(total, IO.getIO().readString("Name of state:"));
+		return new MementoCalculadora(total, IO.getIO().readString(
+				"Name of state:"));
 	}
 
 	@Override

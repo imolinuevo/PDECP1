@@ -1,7 +1,7 @@
 package factoryMethod.naturalNumber;
 
 public class NaturalNumberEn extends NaturalNumber {
-	
+
 	private final String[] textValue = { "nill", "one", "two", "three", "four",
 			"five" };
 

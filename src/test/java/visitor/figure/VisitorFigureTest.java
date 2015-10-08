@@ -22,35 +22,35 @@ public class VisitorFigureTest {
 	public void testVisitorTotalArea() {
 		VisitorArea vArea = new VisitorArea();
 		for (Figure figure : coleccion) {
-            figure.accept(vArea);
-        }
+			figure.accept(vArea);
+		}
 		assertEquals(63, vArea.getTotalArea(), 0.01);
 	}
-	
+
 	@Test
 	public void testVisitorHigherArea() {
 		VisitorArea vArea = new VisitorArea();
 		for (Figure figure : coleccion) {
-            figure.accept(vArea);
-        }
+			figure.accept(vArea);
+		}
 		assertEquals(31.41, vArea.getHigherArea(), 0.01);
 	}
-	
+
 	@Test
 	public void testVisitorTotalSides() {
 		VisitorSides vSides = new VisitorSides();
 		for (Figure figure : coleccion) {
-            figure.accept(vSides);
-        }
+			figure.accept(vSides);
+		}
 		assertEquals(Double.POSITIVE_INFINITY, vSides.getTotalSides(), 0.01);
 	}
-	
+
 	@Test
 	public void testVisitorHigherSides() {
 		VisitorSides vSides = new VisitorSides();
 		for (Figure figure : coleccion) {
-            figure.accept(vSides);
-        }
+			figure.accept(vSides);
+		}
 		assertEquals(Double.POSITIVE_INFINITY, vSides.getHigherSides(), 0.01);
 	}
 

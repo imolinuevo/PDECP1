@@ -4,7 +4,7 @@ public class Conexion {
 	private State state;
 
 	private Link link;
-	
+
 	private Estado estado;
 
 	public Conexion(Link link) {
@@ -17,11 +17,11 @@ public class Conexion {
 	protected void setState(State state) {
 		this.state = state;
 	}
-	
+
 	public Estado getEstado() {
 		return this.estado;
 	}
-	
+
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}

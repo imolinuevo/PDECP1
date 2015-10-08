@@ -20,7 +20,7 @@ public final class VisitorMain {
 			figure.accept(vArea);
 		}
 	}
-	
+
 	public void visitadorLados() {
 		VisitorSides vSides = new VisitorSides();
 		for (Figure figure : coleccion) {

@@ -9,7 +9,7 @@ public class StateCerrado extends State {
 	}
 
 	@Override
-	 protected void cerrar(Conexion conexion) {
+	protected void cerrar(Conexion conexion) {
 		conexion.setState(new StateCerrado());
 		conexion.setEstado(Estado.CERRADO);
 	}

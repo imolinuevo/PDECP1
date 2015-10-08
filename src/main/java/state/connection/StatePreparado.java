@@ -1,7 +1,7 @@
 package state.connection;
 
 public class StatePreparado extends State {
-	
+
 	@Override
 	protected void abrir(Conexion conexion) {
 		conexion.setState(new StatePreparado());
@@ -12,7 +12,7 @@ public class StatePreparado extends State {
 	protected void cerrar(Conexion conexion) {
 		conexion.setState(new StateCerrado());
 		conexion.setEstado(Estado.CERRADO);
-		
+
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class StatePreparado extends State {
 	protected void enviar(Conexion conexion) {
 		conexion.setState(new StateEsperando());
 		conexion.setEstado(Estado.ESPERANDO);
-		
+
 	}
 
 }

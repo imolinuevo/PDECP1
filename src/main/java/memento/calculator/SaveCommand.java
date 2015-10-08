@@ -12,7 +12,8 @@ public class SaveCommand extends Command {
 
 	public void execute() {
 		MementoCalculadora mementoCalculadora = this.calculator.createMemento();
-		gestorMementos.addMemento(mementoCalculadora.getKey(), mementoCalculadora);
+		gestorMementos.addMemento(mementoCalculadora.getKey(),
+				mementoCalculadora);
 	}
 
 	public String name() {

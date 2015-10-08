@@ -11,7 +11,7 @@ public class AddCommand extends Command {
 	public void execute() {
 		this.calculator.add(IO.getIO().readInt("How much to add?"));
 	}
-	
+
 	public String name() {
 		return "Add";
 	}
