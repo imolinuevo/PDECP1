@@ -36,7 +36,7 @@ public class Calculator implements Mementable<MementoCalculadora> {
 
 	@Override
 	public void restoreMemento(MementoCalculadora memento) {
-		memento.getValue();
+		total = memento.getValue();
 	}
 
 }
