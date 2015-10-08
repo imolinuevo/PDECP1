@@ -1,29 +1,42 @@
 package memento.calculator;
 
-public class Calculator {
-    private int total;
+import upm.jbb.IO;
 
-    public Calculator() {
-        this.reset();
-    }
+public class Calculator implements Mementable<MementoCalculadora> {
+	private int total;
 
-    public int getTotal() {
-        return total;
-    }
+	public Calculator() {
+		this.reset();
+	}
 
-    protected void setTotal(int total) {
-        this.total = total;
-    }
+	public int getTotal() {
+		return total;
+	}
 
-    public void add(int valor) {
-        this.setTotal(this.total + valor);
-    }
+	protected void setTotal(int total) {
+		this.total = total;
+	}
 
-    public void subtract(int valor) {
-        this.setTotal(this.total - valor);
-    }
+	public void add(int valor) {
+		this.setTotal(this.total + valor);
+	}
 
-    public void reset() {
-        this.setTotal(0);
-    }
+	public void subtract(int valor) {
+		this.setTotal(this.total - valor);
+	}
+
+	public void reset() {
+		this.setTotal(0);
+	}
+
+	@Override
+	public MementoCalculadora createMemento() {
+		return new MementoCalculadora(total, IO.getIO().readString("Name of state:"));
+	}
+
+	@Override
+	public void restoreMemento(MementoCalculadora memento) {
+		memento.getValue();
+	}
+
 }
